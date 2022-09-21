@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import ReactFlow, { addEdge, Controls, MiniMap, useEdgesState, useNodesState } from 'react-flow-renderer';
 
 import ColorSelectorNode from './CustomColorSelector';
+import OwnerGraph from './OwnerGraph';
 
 // import styles from './index.scss';
 
@@ -11,6 +12,7 @@ const connectionLineStyle = { stroke: '#fff' };
 const snapGrid = [20, 20];
 const nodeTypes = {
   selectorNode: ColorSelectorNode,
+  ownerNode: OwnerGraph,
 };
 
 const CustomNodeFlow = () => {
@@ -69,6 +71,13 @@ const CustomNodeFlow = () => {
         data: { label: 'Output B' },
         position: { x: 650, y: 100 },
         targetPosition: 'left',
+      },
+      {
+        id: '5',
+        type: 'ownerNode',
+        data: { label: "Owner Card" },
+        style: { border: '1px solid #777', padding: 10 },
+        position: { x: 10, y: -50 },
       },
     ]);
 
