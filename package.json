@@ -4,5 +4,8 @@
   "private": true,
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "devDependencies": {
+    "@graphprotocol/client-cli": "^2.2.11"
+  }
 }
