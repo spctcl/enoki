@@ -6,3 +6,12 @@
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+#Misc
+*.txt
+node_modules
+.env
+coverage
+coverage.json
+typechain
+typechain-types
