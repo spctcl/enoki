@@ -1,4 +1,4 @@
-#Yarn Zero-installs
+# yarn
 .yarn/*
 !.yarn/cache
 !.yarn/patches
@@ -7,7 +7,7 @@
 !.yarn/sdks
 !.yarn/versions
 
-#Misc
+#misc
 *.txt
 node_modules
 .env
