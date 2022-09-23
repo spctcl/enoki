@@ -1,4 +1,4 @@
-# yarn
+# Yarn
 .yarn/*
 !.yarn/cache
 !.yarn/patches
@@ -6,6 +6,13 @@
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# Hardhat files
+cache
+artifacts
+
+# Packages
+*.gz
 
 #misc
 *.txt
@@ -15,3 +22,5 @@ coverage
 coverage.json
 typechain
 typechain-types
+
+
