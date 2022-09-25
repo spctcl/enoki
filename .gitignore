@@ -16,7 +16,7 @@ artifacts
 
 #misc
 *.txt
-node_modules
+**/node_modules
 .env
 coverage
 coverage.json
