@@ -62,11 +62,18 @@ __metadata:
     "@types/chai": ^4.3.3
     "@types/mocha": ^9.1.1
     "@types/node": ^18.7.18
+    bip39: ^3.0.4
     chai: ^4.3.6
+    dotenv: ^16.0.2
+    ethereumjs-util: ^7.1.5
+    ethereumjs-wallet: ^1.0.2
     ethers: ^5.7.1
+    fs: ^0.0.1-security
     hardhat: ^2.11.2
     hardhat-deploy: ^0.11.15
+    hardhat-deploy-ethers: ^0.3.0-beta.13
     hardhat-gas-reporter: ^1.0.9
+    qrcode-terminal: ^0.12.0
     solidity-coverage: ^0.8.2
     ts-node: ^10.9.1
     tsconfig-paths: ^4.1.0
@@ -1534,6 +1541,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:11.11.6":
+  version: 11.11.6
+  resolution: "@types/node@npm:11.11.6"
+  checksum: 075f1c011cf568e49701419acbcb55c24906b3bb5a34d9412a3b88f228a7a78401a5ad4d3e1cd6855c99aaea5ef96e37fc86ca097e50f06da92cf822befc1fff
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:^10.0.3":
   version: 10.17.60
   resolution: "@types/node@npm:10.17.60"
@@ -1724,6 +1738,13 @@ __metadata:
   version: 3.0.0
   resolution: "aes-js@npm:3.0.0"
   checksum: 251e26d533cd1a915b44896b17d5ed68c24a02484cfdd2e74ec700a309267db96651ea4eb657bf20aac32a3baa61f6e34edf8e2fec2de440a655da9942d334b8
+  languageName: node
+  linkType: hard
+
+"aes-js@npm:^3.1.2":
+  version: 3.1.2
+  resolution: "aes-js@npm:3.1.2"
+  checksum: 062154d50b1e433cc8c3b8ca7879f3a6375d5e79c2a507b2b6c4ec920b4cd851bf2afa7f65c98761a9da89c0ab618cbe6529e8e9a1c71f93290b53128fb8f712
   languageName: node
   linkType: hard
 
@@ -2207,6 +2228,18 @@ __metadata:
   version: 2.2.0
   resolution: "binary-extensions@npm:2.2.0"
   checksum: ccd267956c58d2315f5d3ea6757cf09863c5fc703e50fbeb13a7dc849b812ef76e3cf9ca8f35a0c48498776a7478d7b4a0418e1e2b8cb9cb9731f2922aaad7f8
+  languageName: node
+  linkType: hard
+
+"bip39@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "bip39@npm:3.0.4"
+  dependencies:
+    "@types/node": 11.11.6
+    create-hash: ^1.1.0
+    pbkdf2: ^3.0.9
+    randombytes: ^2.0.1
+  checksum: 79ce1600a03d1ba5053bdd4e6323f9463ec340764c7e52918b6c6b9dca81221940f2d9a65656447f108f9bc2c8d9ae8df319cca83bbd1dad63f53ef2768d9bae
   languageName: node
   linkType: hard
 
@@ -3855,6 +3888,9 @@ __metadata:
 "enoki@workspace:.":
   version: 0.0.0-use.local
   resolution: "enoki@workspace:."
+  dependenciesMeta:
+    hardhat-deploy@0.11.15:
+      unplugged: true
   languageName: unknown
   linkType: soft
 
@@ -4212,7 +4248,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ethereumjs-util@npm:7.1.5, ethereumjs-util@npm:^7.0.10, ethereumjs-util@npm:^7.1.0, ethereumjs-util@npm:^7.1.4, ethereumjs-util@npm:^7.1.5":
+"ethereumjs-util@npm:7.1.5, ethereumjs-util@npm:^7.0.10, ethereumjs-util@npm:^7.1.0, ethereumjs-util@npm:^7.1.2, ethereumjs-util@npm:^7.1.4, ethereumjs-util@npm:^7.1.5":
   version: 7.1.5
   resolution: "ethereumjs-util@npm:7.1.5"
   dependencies:
@@ -4237,6 +4273,22 @@ __metadata:
     ethjs-util: 0.1.6
     rlp: ^2.2.3
   checksum: e3cb4a2c034a2529281fdfc21a2126fe032fdc3038863f5720352daa65ddcc50fc8c67dbedf381a882dc3802e05d979287126d7ecf781504bde1fd8218693bde
+  languageName: node
+  linkType: hard
+
+"ethereumjs-wallet@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "ethereumjs-wallet@npm:1.0.2"
+  dependencies:
+    aes-js: ^3.1.2
+    bs58check: ^2.1.2
+    ethereum-cryptography: ^0.1.3
+    ethereumjs-util: ^7.1.2
+    randombytes: ^2.1.0
+    scrypt-js: ^3.0.1
+    utf8: ^3.0.0
+    uuid: ^8.3.2
+  checksum: 555effe571c633ca9189e08639928e7bfcb601474f5a37653a3d028b06a10fb8577408c32d425ccecb3ac25d7165322cb9786239fa09ce276532d262206feb8c
   languageName: node
   linkType: hard
 
@@ -4781,6 +4833,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fs@npm:^0.0.1-security":
+  version: 0.0.1-security
+  resolution: "fs@npm:0.0.1-security"
+  checksum: 53c6230e1faae9fa32c1df82c16a84b51b1243d20f3da2b64bd110bb472b73b9185169b703e008356e3cdc92d155088b617d9d39a63b5227a30b3621baad7f5d
+  languageName: node
+  linkType: hard
+
 "fsevents@npm:~2.1.1":
   version: 2.1.3
   resolution: "fsevents@npm:2.1.3"
@@ -5197,6 +5256,16 @@ __metadata:
     ajv: ^6.12.3
     har-schema: ^2.0.0
   checksum: b998a7269ca560d7f219eedc53e2c664cd87d487e428ae854a6af4573fc94f182fe9d2e3b92ab968249baec7ebaf9ead69cf975c931dc2ab282ec182ee988280
+  languageName: node
+  linkType: hard
+
+"hardhat-deploy-ethers@npm:^0.3.0-beta.13":
+  version: 0.3.0-beta.13
+  resolution: "hardhat-deploy-ethers@npm:0.3.0-beta.13"
+  peerDependencies:
+    ethers: ^5.0.0
+    hardhat: ^2.0.0
+  checksum: 45206bf8d088cda08822ecf79d73e4027d8a4777cc23c3ef94568e316c45b8597130d72826fb2417edd32fe4b3dc54097161bef577663769b5c47b8262b983bb
   languageName: node
   linkType: hard
 
@@ -7787,7 +7856,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pbkdf2@npm:^3.0.17, pbkdf2@npm:^3.0.3":
+"pbkdf2@npm:^3.0.17, pbkdf2@npm:^3.0.3, pbkdf2@npm:^3.0.9":
   version: 3.1.2
   resolution: "pbkdf2@npm:3.1.2"
   dependencies:
@@ -7980,6 +8049,15 @@ __metadata:
   version: 5.0.3
   resolution: "pure-rand@npm:5.0.3"
   checksum: a898ab8a40a8eebc641123dab19308044d8bd979efeaba1d8a45e9977593b25b00c3bd9681e2a558a7daec96c6fb8709995b8f10c55475e892b96f381bb6c6d2
+  languageName: node
+  linkType: hard
+
+"qrcode-terminal@npm:^0.12.0":
+  version: 0.12.0
+  resolution: "qrcode-terminal@npm:0.12.0"
+  bin:
+    qrcode-terminal: ./bin/qrcode-terminal.js
+  checksum: 51638d11d080e06ef79ef2d5cfe911202159e48d2873d6a80a3c5489b4b767acf4754811ceba4e113db8f41f61a06c163bcb17e6e18e6b34e04a7a5155dac974
   languageName: node
   linkType: hard
 
